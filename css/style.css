@@ -257,7 +257,7 @@ main section {
   background: var(--tag-bg);
 }
 
-.project-image img { width: 100%; height: 100%; object-fit: cover; }
+.project-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 
 .project-image.no-image {
   display: flex;
@@ -349,6 +349,118 @@ main section {
   font-size: 0.85rem;
   color: var(--muted);
   text-align: center;
+}
+
+/* ---------- Project Card Link ---------- */
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Project Detail Page ---------- */
+.back-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.back-link:hover { color: var(--fg); }
+
+.project-hero {
+  padding-top: 56px;
+  padding-bottom: 40px;
+}
+
+.project-hero .eyebrow { margin-bottom: 12px; }
+
+.project-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.project-meta {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding-bottom: 56px;
+}
+
+.gallery-image {
+  aspect-ratio: 4 / 3;
+  background: var(--tag-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+
+.gallery-image.no-image::after {
+  content: "Add photo";
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.gallery-image.no-image img { display: none; }
+
+.gallery-image.wide { grid-column: span 2; }
+
+.project-detail-body {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 56px;
+  padding-top: 56px;
+  padding-bottom: 96px;
+}
+
+.project-detail-text p {
+  color: var(--muted);
+  font-size: 1.02rem;
+  margin-bottom: 20px;
+}
+
+.project-detail-text h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  color: var(--fg);
+}
+
+.project-detail-side h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.inline-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 4px 0 28px;
+}
+
+@media (max-width: 720px) {
+  .project-gallery { grid-template-columns: 1fr; }
+  .gallery-image.wide { grid-column: span 1; }
+  .project-detail-body { grid-template-columns: 1fr; gap: 32px; }
+  .project-hero h1 { font-size: 1.9rem; }
+  .inline-gallery { grid-template-columns: 1fr; }
 }
 
 /* ---------- Responsive ---------- */
