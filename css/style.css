@@ -455,6 +455,14 @@ main section {
   margin: 4px 0 28px;
 }
 
+.inline-gallery.single {
+  grid-template-columns: 1fr;
+}
+
+.inline-gallery.single .gallery-image {
+  aspect-ratio: 16 / 9;
+}
+
 @media (max-width: 720px) {
   .project-gallery { grid-template-columns: 1fr; }
   .gallery-image.wide { grid-column: span 1; }
