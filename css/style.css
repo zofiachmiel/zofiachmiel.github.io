@@ -463,6 +463,45 @@ main section {
   aspect-ratio: 16 / 9;
 }
 
+.model-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--tag-bg);
+}
+
+.model-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.model-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.model-link:hover { opacity: 0.8; }
+
+.model-link-label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--fg);
+}
+
+.model-caption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 10px 0 28px;
+}
+
 @media (max-width: 720px) {
   .project-gallery { grid-template-columns: 1fr; }
   .gallery-image.wide { grid-column: span 1; }
