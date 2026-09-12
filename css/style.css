@@ -183,20 +183,49 @@ main section {
 
 .hero-links .dot { margin: 0 8px; }
 
-.hero-photo {
+.hero-collage {
   flex-shrink: 0;
-  width: 280px;
-  height: 340px;
-  border-radius: 16px;
+  width: 420px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 90px;
+  grid-auto-flow: dense;
+  gap: 10px;
+}
+
+.collage-photo {
+  border-radius: 12px;
   overflow: hidden;
   background: var(--tag-bg);
 }
 
-.hero-photo img {
+.collage-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
+  display: block;
 }
+
+.collage-photo.no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collage-photo.no-image::after {
+  content: "Add photo";
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0 8px;
+}
+
+.collage-photo.no-image img { display: none; }
+
+.collage-photo.span-2x2 { grid-column: span 2; grid-row: span 2; }
+.collage-photo.span-1x2 { grid-row: span 2; }
+.collage-photo.span-2x1 { grid-column: span 2; }
 
 /* ---------- About ---------- */
 .about-text {
@@ -584,9 +613,9 @@ main section {
 
   .hero h1 { font-size: 2.2rem; }
 
-  .hero-photo {
-    width: 200px;
-    height: 240px;
+  .hero-collage {
+    width: 100%;
+    grid-auto-rows: 70px;
   }
 
   main section { padding: 64px 0; }
