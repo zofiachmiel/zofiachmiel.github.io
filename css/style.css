@@ -111,30 +111,13 @@ main section {
 }
 
 /* ---------- Hero ---------- */
-.hero-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 260px auto 260px;
-  grid-template-areas:
-    "p1 p1 p2 p3"
-    "p4 text text p5"
-    "p6 p6 p7 p7";
-  gap: 14px;
+.hero-collage-frame {
   padding-top: 64px;
   padding-bottom: 96px;
   border-bottom: 1px solid var(--border);
 }
 
-.area-text { grid-area: text; }
-.area-p1 { grid-area: p1; }
-.area-p2 { grid-area: p2; }
-.area-p3 { grid-area: p3; }
-.area-p4 { grid-area: p4; }
-.area-p5 { grid-area: p5; }
-.area-p6 { grid-area: p6; }
-.area-p7 { grid-area: p7; }
-
-.hero-text {
+.hero-text-freeform {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,7 +135,7 @@ main section {
   margin-bottom: 16px;
 }
 
-.hero-text h1 {
+.hero-text-freeform h1 {
   font-size: 2.6rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -205,27 +188,29 @@ main section {
 
 .hero-links .dot { margin: 0 8px; }
 
-.collage-photo {
+.freeform-photo {
   border-radius: 12px;
   overflow: hidden;
   background: var(--tag-bg);
+  margin: 0 auto 16px;
+  width: var(--w);
+  max-width: 100%;
 }
 
-.collage-photo img {
+.freeform-photo img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
   display: block;
 }
 
-.collage-photo.no-image {
+.freeform-photo.no-image {
   display: flex;
   align-items: center;
   justify-content: center;
+  aspect-ratio: 3 / 4;
 }
 
-.collage-photo.no-image::after {
+.freeform-photo.no-image::after {
   content: "Add photo";
   color: var(--muted);
   font-size: 0.75rem;
@@ -233,7 +218,23 @@ main section {
   padding: 0 8px;
 }
 
-.collage-photo.no-image img { display: none; }
+.freeform-photo.no-image img { display: none; }
+
+@media (min-width: 721px) {
+  .hero-collage-frame {
+    position: relative;
+    height: 1200px;
+  }
+
+  .freeform-photo,
+  .hero-text-freeform {
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    width: var(--w);
+    margin: 0;
+  }
+}
 
 
 /* ---------- About ---------- */
@@ -614,21 +615,16 @@ main section {
 
   .nav-toggle { display: flex; }
 
-  .hero-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto repeat(4, 110px);
-    grid-template-areas:
-      "text text"
-      "p1 p2"
-      "p3 p4"
-      "p5 p6"
-      "p7 p7";
-    padding-top: 48px;
+  .hero-collage-frame { padding-top: 48px; }
+
+  .freeform-photo {
+    width: 80% !important;
+    max-width: 300px;
   }
 
-  .hero-text { padding: 0 0 24px; }
+  .hero-text-freeform { padding: 0 0 24px; }
 
-  .hero-text h1 { font-size: 2.2rem; }
+  .hero-text-freeform h1 { font-size: 2.2rem; }
 
   main section { padding: 64px 0; }
 
