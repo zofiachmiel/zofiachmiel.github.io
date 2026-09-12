@@ -151,8 +151,9 @@ main section {
 
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   margin-bottom: 20px;
 }
 
@@ -223,7 +224,7 @@ main section {
 @media (min-width: 721px) {
   .hero-collage-frame {
     position: relative;
-    height: 930px;
+    height: 660px;
   }
 
   .freeform-photo,
