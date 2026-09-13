@@ -149,10 +149,42 @@ main section {
 
 .hero-outer-photo.no-image img { display: none; }
 
+.hero-side-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 300px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.hero-side-row {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-side-row > div,
+.hero-side-bottom {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--tag-bg);
+}
+
+.hero-side-row > div {
+  flex: 1 1 0;
+}
+
+.hero-side-row img,
+.hero-side-bottom img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .hero-inner {
   position: relative;
   flex: 1 1 auto;
-  max-width: 770px;
+  max-width: 575px;
   margin: 0 auto;
 }
 
@@ -273,6 +305,12 @@ main section {
     flex: none;
   }
 
+  .hero-side-group {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto 16px;
+  }
+
   .freeform-photo {
     width: 80% !important;
     max-width: 300px;
@@ -286,7 +324,7 @@ main section {
 @media (min-width: 1280px) {
   .hero-inner {
     height: 620px;
-    flex: 0 0 770px;
+    flex: 0 0 575px;
   }
 
   .hero-outer-photo {
