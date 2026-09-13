@@ -329,8 +329,14 @@ main section {
   }
 
   .hero-outer-photo {
-    flex: 1 1 220px;
-    max-width: 435px;
+    flex: 0 0 auto;
+    width: auto;
+    height: 620px;
+  }
+
+  .hero-outer-photo img {
+    width: auto;
+    height: 100%;
   }
 
   .freeform-photo,
