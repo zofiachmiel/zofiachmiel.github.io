@@ -154,13 +154,13 @@ main section {
   flex-direction: column;
   gap: 12px;
   flex: 1 1 220px;
-  max-width: 360px;
+  max-width: 380px;
   margin: 0 auto;
 }
 
 .hero-side-row {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 12px;
 }
 
@@ -330,7 +330,7 @@ main section {
 
   .hero-outer-photo {
     flex: 1 1 220px;
-    max-width: 480px;
+    max-width: 435px;
   }
 
   .freeform-photo,
