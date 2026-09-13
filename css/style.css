@@ -113,11 +113,19 @@ main section {
 
 /* ---------- Hero ---------- */
 .hero-collage-frame {
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 24px;
   padding: 16px 20px;
   border-bottom: 1px solid var(--border);
+}
+
+.hero-left-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .hero-outer-photo {
@@ -149,13 +157,32 @@ main section {
 
 .hero-outer-photo.no-image img { display: none; }
 
+.hero-left-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+  width: 150px;
+}
+
+.hero-left-pair > div {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--tag-bg);
+}
+
+.hero-left-pair img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .hero-side-group {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  flex: 1 1 220px;
-  max-width: 380px;
-  margin: 0 auto;
+  flex-shrink: 0;
+  width: 320px;
 }
 
 .hero-side-row {
@@ -182,13 +209,6 @@ main section {
   display: block;
 }
 
-.hero-inner {
-  position: relative;
-  flex: 1 1 auto;
-  max-width: 575px;
-  margin: 0 auto;
-}
-
 .hero-text-freeform {
   display: flex;
   flex-direction: column;
@@ -196,6 +216,7 @@ main section {
   justify-content: center;
   text-align: center;
   padding: 24px;
+  width: 380px;
 }
 
 .eyebrow {
@@ -261,42 +282,14 @@ main section {
 
 .hero-links .dot { margin: 0 8px; }
 
-.freeform-photo {
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--tag-bg);
-  margin: 0 auto 16px;
-  width: var(--w);
-  max-width: 100%;
-}
-
-.freeform-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.freeform-photo.no-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 3 / 4;
-}
-
-.freeform-photo.no-image::after {
-  content: "Add photo";
-  color: var(--muted);
-  font-size: 0.75rem;
-  text-align: center;
-  padding: 0 8px;
-}
-
-.freeform-photo.no-image img { display: none; }
-
-@media (max-width: 1279px) {
+@media (max-width: 1439px) {
   .hero-collage-frame {
     display: block;
     padding: 48px 24px 0;
+  }
+
+  .hero-left-group {
+    display: block;
   }
 
   .hero-outer-photo {
@@ -306,32 +299,35 @@ main section {
     flex: none;
   }
 
+  .hero-left-pair {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto 16px;
+  }
+
   .hero-side-group {
     width: 80%;
     max-width: 300px;
     margin: 0 auto 16px;
   }
 
-  .freeform-photo {
-    width: 80% !important;
-    max-width: 300px;
+  .hero-text-freeform {
+    width: 100%;
+    padding: 0 0 24px;
   }
-
-  .hero-text-freeform { padding: 0 0 24px; }
 
   .hero-text-freeform h1 { font-size: 2.2rem; }
 }
 
-@media (min-width: 1280px) {
-  .hero-inner {
-    height: 620px;
-    flex: 0 0 575px;
+@media (min-width: 1440px) {
+  .hero-collage-frame {
+    min-height: 500px;
   }
 
   .hero-outer-photo {
     flex: 0 0 auto;
     width: auto;
-    height: 620px;
+    height: 412px;
   }
 
   .hero-outer-photo img {
@@ -339,13 +335,11 @@ main section {
     height: 100%;
   }
 
-  .freeform-photo,
   .hero-text-freeform {
     position: absolute;
-    top: var(--top);
-    left: var(--left);
-    width: var(--w);
-    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
