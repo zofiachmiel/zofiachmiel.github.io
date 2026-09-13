@@ -306,7 +306,7 @@ main section {
 
 /* ---------- About ---------- */
 .about-text {
-  max-width: 640px;
+  max-width: none;
   color: var(--muted);
   font-size: 1.05rem;
 }
