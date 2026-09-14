@@ -341,6 +341,20 @@ main section {
     top: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .hero-left-group {
+    position: absolute;
+    top: 50%;
+    right: calc(50% + 210px);
+    transform: translateY(-50%);
+  }
+
+  .hero-side-group {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 210px);
+    transform: translateY(-50%);
+  }
 }
 
 
