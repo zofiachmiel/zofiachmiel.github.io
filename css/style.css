@@ -332,7 +332,7 @@ main section {
 
 @media (min-width: 1440px) {
   .hero-collage-frame {
-    min-height: 500px;
+    min-height: calc(100vh - 72px);
   }
 
   .hero-outer-photo {
