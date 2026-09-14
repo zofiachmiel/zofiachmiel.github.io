@@ -327,7 +327,7 @@ main section {
   .hero-outer-photo {
     flex: 0 0 auto;
     width: auto;
-    height: 412px;
+    height: 300px;
   }
 
   .hero-outer-photo img {
