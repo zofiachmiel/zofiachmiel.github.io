@@ -3,3 +3,13 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# Loose personal/work files that don't belong in the published site.
+# Only files explicitly placed under images/, resume/, css/, js/, and
+# projects/ should ever be tracked.
+/Boehringer Ingelheim/
+/Profile.JPG
+/Screenshot*.png
+/*.pdf
+/*.docx
+~$*

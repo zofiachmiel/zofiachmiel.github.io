@@ -501,8 +501,9 @@ main section {
 }
 
 .timeline-logo {
-  width: 64px;
-  height: 64px;
+  align-self: center;
+  width: 88px;
+  height: 88px;
   object-fit: contain;
 }
 
