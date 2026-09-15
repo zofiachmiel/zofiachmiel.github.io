@@ -377,6 +377,10 @@ main section {
   font-size: 1.05rem;
 }
 
+.about-text + .about-text {
+  margin-top: 20px;
+}
+
 /* ---------- Skills ---------- */
 .skills-grid {
   display: grid;
