@@ -513,9 +513,13 @@ main section {
   margin-bottom: 8px;
 }
 
-.timeline-content p:last-child {
+.timeline-content p:not(.timeline-org) {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.timeline-content p:not(.timeline-org):not(:last-child) {
+  margin-bottom: 8px;
 }
 
 /* ---------- Contact ---------- */
