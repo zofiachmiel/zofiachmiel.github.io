@@ -522,6 +522,21 @@ main section {
   margin-bottom: 8px;
 }
 
+.timeline-bullets {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.timeline-bullets li {
+  margin-bottom: 6px;
+}
+
+.timeline-bullets li:last-child {
+  margin-bottom: 0;
+}
+
 /* ---------- Contact ---------- */
 .contact { border-bottom: none; }
 
