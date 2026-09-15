@@ -540,6 +540,29 @@ main section {
 /* ---------- Contact ---------- */
 .contact { border-bottom: none; }
 
+.contact-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.contact-text { flex: 1; }
+
+.contact-photo {
+  flex-shrink: 0;
+  width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--tag-bg);
+}
+
+.contact-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .contact-links {
   display: flex;
   gap: 16px;
@@ -747,6 +770,8 @@ main section {
 @media (max-width: 860px) {
   .skills-grid { grid-template-columns: 1fr; gap: 28px; }
   .project-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-inner { flex-direction: column-reverse; align-items: flex-start; gap: 24px; }
+  .contact-photo { width: 160px; }
 }
 
 @media (max-width: 720px) {
