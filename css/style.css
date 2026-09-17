@@ -702,6 +702,12 @@ main section {
   object-fit: contain;
 }
 
+.inline-gallery.small {
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .model-embed {
   width: 100%;
   aspect-ratio: 16 / 9;
