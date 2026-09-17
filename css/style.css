@@ -112,17 +112,6 @@ main section {
   margin-bottom: 44px;
 }
 
-.section-title:has(+ .section-note) {
-  margin-bottom: 10px;
-}
-
-.section-note {
-  font-size: 0.9rem;
-  color: var(--muted);
-  max-width: 560px;
-  margin-bottom: 36px;
-}
-
 /* ---------- Hero ---------- */
 .hero-collage-frame {
   position: relative;
