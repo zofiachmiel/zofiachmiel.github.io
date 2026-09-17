@@ -692,6 +692,16 @@ main section {
   aspect-ratio: 16 / 9;
 }
 
+.inline-gallery.natural-size .gallery-image {
+  aspect-ratio: auto;
+}
+
+.inline-gallery.natural-size .gallery-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .model-embed {
   width: 100%;
   aspect-ratio: 16 / 9;
