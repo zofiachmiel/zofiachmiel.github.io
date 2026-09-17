@@ -690,6 +690,10 @@ main section {
   grid-template-columns: 1fr;
 }
 
+.inline-gallery.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .inline-gallery.single .gallery-image {
   aspect-ratio: 16 / 9;
 }
@@ -782,6 +786,7 @@ main section {
   .project-detail-body { grid-template-columns: 1fr; gap: 32px; }
   .project-hero h1 { font-size: 1.9rem; }
   .inline-gallery { grid-template-columns: 1fr; }
+  .inline-gallery.cols-3 { grid-template-columns: 1fr; }
 }
 
 /* ---------- Responsive ---------- */
